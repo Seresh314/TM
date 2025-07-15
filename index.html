@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Испугайся</title>
+  <style>
+    body { background: black; color: white; text-align: center; font-size: 24px; }
+    #text { margin-top: 30%; }
+    #cases { display: none; margin-top: 20px; }
+    button { padding: 10px 20px; margin: 10px; }
+  </style>
+</head>
+<body>
+  <div id="text"></div>
+  <div id="cases">
+    <button onclick="choose(1)">Кейс 1</button>
+    <button onclick="choose(2)">Кейс 2</button>
+  </div>
+
+  <script>
+    const text = document.getElementById("text");
+    const cases = document.getElementById("cases");
+
+    setTimeout(() => {
+      text.innerText = "Бу";
+    }, 2000);
+
+    setTimeout(() => {
+      text.innerText = "Испугался?";
+    }, 5000);
+
+    setTimeout(() => {
+      text.style.display = "none";
+      cases.style.display = "block";
+    }, 10000);
+
+    function choose(n) {
+      if (n === 1) {
+        alert("Правильно! Получи ссылку: https://ваш-бусти.ссылка");
+      } else {
+        alert("Ты думал будет Басс, н@ебал");
+      }
+    }
+  </script>
+</body>
+</html>
